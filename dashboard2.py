@@ -80,7 +80,7 @@ cols = st.columns([0.7, 0.3], gap='medium')
 
 with cols[0]:
     options = df_uni["DS_NATUREZA_JUR"].unique()
-    unity_type = st.multiselect("Tipos de Unidades de Saúde", options, placeholder="Selecione uma ou mais opções")
+    unity_type = st.multiselect("Tipos de Unidades de Saúde (Opcional)", options, placeholder="Selecione uma ou mais opções")
     selected_codes = df_uni[df_uni["DS_NATUREZA_JUR"].isin(unity_type)]["CO_NATUREZA_JUR"].tolist()
 
 with cols[1]:
